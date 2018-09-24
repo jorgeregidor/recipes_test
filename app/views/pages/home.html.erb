@@ -1,0 +1,25 @@
+
+<div class="container">
+
+	<%= form_tag search_path , remote: true, method: :get, id: 'recipe-search' do %>
+		
+		<div class="form-row margin-default-space">
+			<%= text_field_tag :q, params[:q], placeholder: 'Recipe name', autofocus: true, :class => "form-control col-md-10" %>
+		
+			<%= submit_tag "Search", :class => "btn col-md-2" %>
+		</div>
+		
+	<% end %>	 
+
+
+
+
+<table class="table table-striped margin-default-space">
+  <tbody id="result-list">
+
+  </tbody>
+</table>
+
+
+		
+</div>
